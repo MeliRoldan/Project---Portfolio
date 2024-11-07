@@ -1,38 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: black;
-    color: greenyellow;
+    background-color: #f4f4f9;
+    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-hr {
-    margin: 30px 0px;
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #9B4D96;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#main_img {
-    width: 200px;
-    height: 200px;
+.header-content img {
+    width: 113px;
+    height: 113px;
     border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: auto;
+    margin-top: 20px;
+    border: 3px solid #f4f4f9; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.1));
+    position: relative;
+    overflow: hidden;
 }
 
-h1, h2, p{
+.header-content p {
+    max-width: 900px;
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    background-color: #f4f4f9;
+    padding-top: 100px; /* To create space between header and project section */
+}
+
+.project-section {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.project-section h3 {
+    text-align: center;
+    color: #9B4D96;
+    margin-bottom: 20px;
+}
+
+.project-category h4 {
+    color: #4a4a6a;
+    margin-top: 20px;
     text-align: center;
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
 }
 
-li, a {
-    color: white;
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: #5a5a89;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9B4D96;
+    text-decoration: underline;
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 50px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #555;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #5a5a89;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Parallax effect on scrolling */
+main {
+    overflow-x: hidden; /* Ensure the page content is within bounds */
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+}
+
+.project-section h3,
+.project-category h4 {
+    position: relative;
+    z-index: 2; /* Make text and links stay on top of background */
+}
+
+footer {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+Font Awesome Icon Styling
+i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 1.2rem;
 }
